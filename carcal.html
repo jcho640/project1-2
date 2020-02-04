@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <head>
+        <title>Johann.Cho</title>
+        <link rel="stylesheet" type="text/css" href="cho.css">
+        <meta charset="UTF-8">
+        <script src="modernizr.custom.05819.js"></script>
+    </head>
+
+    <body>
+        <div style="neo">
+            <nav>
+                <a href="/Index.html/">Home</a> |
+                <a href="/Current.html/">Current Project</a> |
+                <a href="/Past.html/">Previous Projects</a> |
+                <a href="/CarCalc.html/">Car Calculators</a>
+            </nav>
+            <header>
+                <h2>Car Calculators</h2>
+            </header>
+
+            <main>
+                <h3>Horsepower Dyno Calculator</h3>
+                <label for="torqueRating">Torque (in ft-lbs)</label>
+                <input type="number" id="torqueRating">
+                <label for="rotationsPerMinute">RPM</label>
+                <input type="number" id="rotationsPerMinute">
+                <p>Click the button to get your horsepower at the entered RPM.</p>
+
+                <button onclick="myFunction()">Try it</button>
+
+                <p id="hP"></p>
+
+                <script>
+                var x=document.getElementById("torqueRating").value;
+                var y=document.getElementByID("rotationsPerMinute").value;
+                var horsePower = (x * y) / 5252;
+                document.getElementById("hP").innerHTML = "Your car is making " + horsePower;
+                </script>
+            </main>
+                <br>
+            
+            <footer>
+                <h4><a href="mailto:jcho0261@panther.chaffey.edu">Email Me</a></h4>
+            </footer>
+
+        </div>
+    </body>
+</html>
